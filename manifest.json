@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Unilogin Extension",
+    "version": "1.0",
+    "description": "Automatically inputs your Unilogin username and password.",
+    "permissions": [
+      "activeTab",
+      "storage"
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "icons": {
+        "128": "icon.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
